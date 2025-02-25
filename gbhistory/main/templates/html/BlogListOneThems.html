@@ -1,0 +1,14 @@
+{% extends 'html/base.html' %}
+
+
+{% block title %}
+    Списо Блогов
+{% endblock title %}
+
+
+{% block content %}
+    {% for i in b.blog %}
+        <p>{{i.previewTitle}}</p>
+    {% endfor %}
+{% endblock content %}
+    
