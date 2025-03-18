@@ -1,0 +1,54 @@
+a {
+    text-decoration: none;
+}
+
+.basic-card {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 400px);
+    width: 100%;
+    margin-top: 20px;
+    
+    
+    
+
+}
+
+.card {
+    background-color: #B4B3B3;
+    width: 360px;
+    height: 355px;
+    background-color: var(--block_text_background_color);
+}
+
+
+.card:hover {
+    border: var(--block_text_color) solid 2px;
+    color: var(--nav_hover_text);
+}
+
+.card-text {
+    background-color: #474B4F;
+    width: 360px;
+    height: 120px;
+    color: #FFF;
+    font-size: 24px;
+    font-family:'Times New Roman', Times, serif;
+
+
+}
+
+.card-img {
+    background-color: transparent;
+    width: 360px;
+    height: 235px;
+}
+
+.card-img img {
+    background-color: transparent;
+    width: 360px;
+    height: 235px;
+}
+

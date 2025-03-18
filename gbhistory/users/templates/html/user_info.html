@@ -1,0 +1,45 @@
+{% extends 'html/base.html' %}
+
+{% load static %}
+
+
+
+{% block link_block %}
+    
+    <link rel="stylesheet" href="{% static 'css/user_info.css' %}">
+{% endblock link_block %}
+    
+
+
+{% block title %}
+    
+{% endblock title %}
+    
+
+
+{% block content %}
+    <div class="container">
+        
+        <div class="user">
+            
+            <table>
+                <tr>
+                    <th>Имя Фамилия</th>
+                    <td>{{ user.first_name }} {{ user.last_name }}</td>
+                </tr>
+                <tr>
+                    <th>Почта</th>
+                    <td>{{ user.email }}</td>
+                </tr>
+                <tr>
+                    <th>Логин</th>
+                    <td>{{ user.username }}</td>
+                </tr>
+            </table>
+        </div>
+            
+        </div>
+
+    </div>
+{% endblock content %}
+    

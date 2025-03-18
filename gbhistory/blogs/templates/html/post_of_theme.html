@@ -1,0 +1,32 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+{% block title %}
+    Список Блогов
+{% endblock title %}
+
+{% block link_block %}
+<link rel="stylesheet" href="{% static 'css/card.css' %}">
+{% endblock link_block %}
+
+
+{% block content %}
+    <div class="basic-card">     
+        {% for post in posts %}
+            <a href='{{ post.get_absolute_url }}'>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="{{post.featured_image.url}}" alt="">
+                    </div>
+                    <div class="card-text">
+                        {{post.title}} 
+                    </div>           
+                </div>                        
+            </a> 
+        {% endfor %}
+    </div>
+        
+        
+        
+    
+{% endblock content %}

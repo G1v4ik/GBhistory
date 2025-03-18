@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.post {
+    display: inline-block;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 100px;
+    color: var(--main_text_color);
+    font-size: 24px;
+    text-align: center;
+    justify-items: center;
+    font-family: sans-serif;
+    align-self: center;
+    align-content: center;
+}
+
+.post_img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.post_img img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+
+.content {
+    text-align: center;
+    width: 800px;
+    word-break: break-all;
+}

@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        @font-face {
+        font-family: 'kz-supercell-magic';
+        src:local('kz'),
+            local('kz-supercell-magic'),
+            url('{% static "fonts/kz-supercell-magic.ttf" %}'); 
+        }
+
+        @font-face {
+        font-family: 'urabumbumsp';
+        src:local('urabumbum'),
+            local('kz-supercell-magic'),
+            url('{% static "fonts/UraBumBumSP.otf" %}'); 
+        }
+        body {
+            font-family: urabumbumsp, sans-serif;
+        }
+
+
+    </style>
+    
+    {% block link_block %}
+        
+    {% endblock link_block %}
+    <link rel="stylesheet" href="{% static 'css/buttons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/input.css' %}">
+    <script src="{% static 'js/site_header.js' %}"></script>
+    </script>
+    <!-- <link rel="shortcut icon" type="image/png" href="{% static '/favicon.png' %}"> -->
+    <title>{%block title%}{% endblock title%}</title>
+</head>
+<body>
+    
+        <header>
+            <nav class="navMenu">
+                
+                <a href="{% url 'home' %}">home</a>
+                <a href="#">news</a>
+                <a href="{% url 'profile_index' %}">
+                    
+                    {% if request.user.is_authenticated %}
+                        {{request.user.username}}
+                    {% else %}
+                        profile
+                    {% endif %}
+                </a>
+                <a href="#">about</a>
+            
+            </nav>
+        </header>
+        <main>
+            {% block content %}
+            
+            {% endblock %}
+        </main>
+
+</body>
+</html>

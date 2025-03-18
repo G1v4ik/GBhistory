@@ -1,0 +1,28 @@
+{% extends 'html/base.html' %}
+
+{% load static %}
+
+
+{% block link_block %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock link_block %}
+    
+
+{% block title %}Темы Блогов{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+    <div class="categories">
+
+        {% for category in categories %}
+        <div class="category">
+            <a  href='{{category.get_absolute_url}}'>{{category.name}}</a>
+        </div>
+        {% endfor %}
+    
+    </div>
+</div>
+{% endblock %}
+
+    

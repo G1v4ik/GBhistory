@@ -1,0 +1,59 @@
+{% extends 'html/base.html' %}
+
+{% load static %}
+
+
+
+{% block link_block %}
+    
+    <link rel="stylesheet" href="{% static 'css/users_index.css' %}">
+{% endblock link_block %}
+    
+
+
+{% block title %}
+    PROFILE
+{% endblock title %}
+    
+
+
+{% block content %}
+    <div class="container">
+        
+        <div class="users">
+            
+            {% if request.user.is_authenticated %}
+                <form action="{% url 'user_info' request.user.id %}">
+                    <button type="submit">Info Account</button>
+                </form>
+
+                <form action="{% url 'blogs:post_add' %}">
+                    <button type="submit">Add Post</button>
+                </form>
+
+                <form action="{% url 'blogs:post_my' request.user.id %}">
+                    <button type="submit">My Post</button>
+                </form>
+
+                <form action="{% url 'profile_logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">LogOut</button>
+                </form>
+
+            {% else %}
+                <form action="{% url 'profile_login' %}">
+                    <button type="submit">Login</button>
+                </form>
+
+                
+                <form action="{% url 'profile_register' %}">
+                    <button type="submit">Register</button>
+                </form>    
+            {% endif %}
+                
+            
+        </div>
+
+    </div>
+{% endblock content %}
+    

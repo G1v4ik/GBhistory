@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.input_card {
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    margin-top: 2%;
+}
+
+form {
+    color: var(--main_text_color);
+    font-size: 24px;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+p {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: 10px;
+}
+
+p input {
+    width: 100%;
+}
+
+p textarea {
+    width: 100%;
+}
+
+p select {
+    width: 100%;
+}
+
+
+input {
+    border: none;
+    padding: 10px 0 10px 10px;
+    font-size: 20px;
+}
+
+
+textarea {
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+}
+
+
+select {
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+}
+
+
+
+input:focus {
+    
+    outline: var(--nav_hover_text) solid 3px;
+}
+
+input:focus:hover {
+    
+    outline: var(--nav_hover_text) solid 3px;
+}
+
+
+textarea:focus {
+    
+    outline: var(--nav_hover_text) solid 3px;
+}
+
+textarea:focus:hover {
+    
+    outline: var(--nav_hover_text) solid 3px;
+}
+
+
+select:hover {
+    border: none;
+}
+
+select:focus {
+    
+    outline: var(--nav_hover_text) solid 3px;
+}
+
+select:focus:hover {
+    
+    outline: var(--nav_hover_text) solid 3px;
+}

@@ -1,0 +1,27 @@
+{% extends 'html/base.html' %}
+{% load static %}
+
+
+{% block link_block %}
+    
+{% endblock link_block %}
+    
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+    
+
+{% block content %}
+    <div class="container">
+
+        <div class="input_card">
+            <form action="#" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">register</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
+    
