@@ -50,3 +50,6 @@ body {
   border: var(--nav_hover_text) solid 1px;
 }
 
+.errorlist {
+  color: rgb(172, 52, 52);
+}

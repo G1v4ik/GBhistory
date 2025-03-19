@@ -13,10 +13,19 @@
 {% block content %}
     <div class="basic-card">     
         {% for post in posts %}
+                
             <a href='{{ post.get_absolute_url }}'>
                 <div class="card">
                     <div class="card-img">
-                        <img src="{{post.featured_image.url}}" alt="">
+                        
+                        {% if post.featured_image %}
+                            <img src="{{ post.featured_image.url }}" alt="">    
+                        
+                        {% else %}
+                            <img src="{% static 'img/img_havent.jpg' %}" alt="Havn`t IMG">
+
+                        {% endif %}
+                        
                     </div>
                     <div class="card-text">
                         {{post.title}} 
